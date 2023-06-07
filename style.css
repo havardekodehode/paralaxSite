@@ -1,0 +1,156 @@
+:root{
+    /* Color palette */
+    --color1: #0081A7;
+    --color2: #00AFB9;
+    --color3: #FDFCDC;
+    --color4: #FED9B7;
+    --color5: #F07167;
+
+    /* Site color */
+    --navBar-bg-color:var(--color1);
+    --body-bg-color: #023047;
+    --input-bg-color: #8ecae6;
+    --button-color: #219ebc;
+    /* Font */
+    --font-size-1small: 12px;
+    --font-size-1normal: 16px;
+    --font-size-1big: 24px;
+    --navbar-font-color: #1f1f1f;
+    
+
+}
+
+body, html{
+    height: 100%;
+    margin: 0;
+    font-size: 16px;
+    font-family: "Lato", sans-serif;
+    font-weight: 400;
+    line-height: 1.8rem;
+    color: #666;
+    min-width: 500px;
+}
+
+.navbar{
+    display: flex;
+    /* position: absolute; */
+    justify-content: space-evenly;
+    list-style: none;
+    background-color: transparent;
+    height: 4%;
+    width: 100%;
+    margin: 0px;
+    padding: 0px;
+}
+
+.navelements{
+    border: solid black 0px;
+    padding: 6px 12px;
+    width: 56px;
+    border-radius: 10px;
+    margin-top: 1%;
+    color:var(--navbar-font-color);
+    font-size: var(--font-size-1normal);
+    font-weight: bold;
+}
+
+.navelements a{
+    display: block;
+    position:relative;
+    text-decoration:none;
+    font-family: sans-serif;
+    text-transform:uppercase;
+    transition:0.5s;
+}
+
+.navbar:hover .navelements a{
+    transform:scale(1.5);
+    opacity:0.2;
+    filter:blur(2px);
+}
+
+.navbar .navelements a:hover{
+    transform: scale(1.5);
+    opacity: 1;
+    filter: blur(0);
+    text-decoration: none;
+    color: #111;
+}
+.navbar .navelements a:after{
+  content:'';
+  position:absolute;
+  top:0;
+  left:0;
+  width:100%;
+  height:100%;
+  background:#ff497c;
+  transition:0.5s;
+  transform-origin:right;
+  transform:scaleX(0);
+  z-index:-1;
+}
+
+.pimg1, .pimg2, .pimg3{
+    position: relative;
+    opacity: 0.70;
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+
+    background-attachment: fixed;
+}
+
+.pimg1{
+    background-image: url("images/bjorn-agerbeek-xiEbf9ilzw8-unsplash.jpg");
+    min-height: 100%;
+}
+.pimg2{
+    background-image: url("images/gina-aburlacitei-oKbRkGt-UNU-unsplash.jpg");
+    min-height: 100%;
+}
+.pimg3{
+    background-image: url("images/herr-bohn-EFPLaoX5nuY-unsplash.jpg");
+    min-height: 100%;
+}
+
+.section{
+    text-align: center;
+    padding: 50px 80px;
+}
+
+.section-light{
+    background-color: #f4f4f4;
+    color: #666;
+}
+
+.section-dark{
+    background-color: #282e34;
+    color: #ddd;
+}
+
+.ptext{
+    position: absolute;
+    top: 50%;
+    width: 100%;
+    text-align: center; 
+    color: #000;
+    font-size: 27px;
+    letter-spacing: 8px;
+    text-transform: uppercase;
+}
+
+.ptext .border{
+    background-color: #111;
+    color: white;
+    padding: 20px;
+}
+
+.ptext .border.trans{
+    background-color: transparent;
+}
+
+@media(max-width:569px){
+    .pimg1, .pimg2, .pimg3{
+        background-attachment: scroll;
+    }
+}
