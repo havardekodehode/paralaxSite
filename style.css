@@ -41,6 +41,7 @@ body, html{
     width: 100%;
     margin: 0px;
     padding: 0px;
+    background-blend-mode: darken;
 }
 
 .navelements{
@@ -93,7 +94,7 @@ body, html{
 .pimg1, .pimg2, .pimg3{
     position: relative;
     opacity: 0.70;
-    background-position: center;
+    background-position: 50% 36%;
     background-size: cover;
     background-repeat: no-repeat;
 
